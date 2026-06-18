@@ -53,7 +53,7 @@ async function createPostController(req, res) {
 }
 
 async function createPostController(req,res){
-    const token= req.coomies.token;
+    const token= req.cookies.token;
     if(!token){
         return res.status(404).json({
             message:"token not provided"
